@@ -38,9 +38,10 @@ Deploy **frontend** on **Vercel** and **backend** on **Render** or **Railway**. 
      ```
    - **Instance type:** Free (or paid if you prefer)
 
-4. **Environment variables** (in Render dashboard)
+4. **Environment variables** (add these **before** the first deploy)
+   - **PYTHON_VERSION** = `3.12.7` ← **Required.** Render uses 3.14 by default on some setups; ChromaDB needs 3.12.
    - **OPENAI_API_KEY** = your OpenAI API key  
-   - **FRONTEND_URL** = your Vercel frontend URL (add this after you deploy the frontend, e.g. `https://your-app.vercel.app`)
+   - **FRONTEND_URL** = your Vercel frontend URL (add after you deploy the frontend, e.g. `https://your-app.vercel.app`)
 
 5. **Deploy**  
    Click **Create Web Service**. Render will build (install deps + run ingestion) then start the app. Wait until the service is **Live**.
